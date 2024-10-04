@@ -1,0 +1,19 @@
+let toggle = false;
+
+function toggle_input_type() {
+
+    let input = document.querySelector("#password");
+
+    if (toggle) {
+        input.setAttribute("type", "password");
+        this.innerHTML = '<i class="bi-eye"></i>';
+    } else {
+        input.setAttribute("type", "text");
+        this.innerHTML = '<i class="bi-eye-slash"></i>';
+    }
+
+    toggle = !toggle;
+
+}
+
+document.querySelector('#btn_toggle_input').onclick = toggle_input_type;
